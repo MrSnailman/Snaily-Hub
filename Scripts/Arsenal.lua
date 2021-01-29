@@ -27,6 +27,20 @@ local gui = Instance.new("BillboardGui")
 local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
 
 --Properties:
+gui.Name = "Cracked esp"; ---- properties of the esp
+gui.ResetOnSpawn = false
+gui.AlwaysOnTop = true;
+gui.LightInfluence = 0;
+gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+esp.Text = ""
+esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+esp.BorderSizePixel = 4;
+esp.BorderColor3 = Color3.new(esp_settings.colour)
+esp.BorderSizePixel = 0
+esp.Font = "GothamSemibold"
+esp.TextSize = esp_settings.textsize
+esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
 
 Snaily.Name = "Snaily"
 Snaily.Parent = game.CoreGui
@@ -37,7 +51,7 @@ Open.Parent = Snaily
 Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.Position = UDim2.new(0.200000003, 0, -0, 0)
 Open.Size = UDim2.new(0, 59, 0, 22)
-Open.Visible = false
+
 
 OpenButton.Name = "OpenButton"
 OpenButton.Parent = Open
@@ -50,6 +64,7 @@ OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenButton.TextScaled = true
 OpenButton.TextSize = 14.000
 OpenButton.TextWrapped = true
+OpenButton.Visible = true
 OpenButton.MouseButton1Down:connect(function()
 	Main.Visible = true
 	OpenButton.Visible = false
@@ -143,21 +158,6 @@ ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
 ESP.TextScaled = true
 ESP.TextSize = 14.000
 ESP.TextWrapped = true
-
-gui.Name = "Cracked esp"; ---- properties of the esp
-gui.ResetOnSpawn = false
-gui.AlwaysOnTop = true;
-gui.LightInfluence = 0;
-gui.Size = UDim2.new(1.75, 0, 1.75, 0);
-esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
-esp.Text = ""
-esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
-esp.BorderSizePixel = 4;
-esp.BorderColor3 = Color3.new(esp_settings.colour)
-esp.BorderSizePixel = 0
-esp.Font = "GothamSemibold"
-esp.TextSize = esp_settings.textsize
-esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
 
 b4.Name = "b4"
 b4.Parent = Main
