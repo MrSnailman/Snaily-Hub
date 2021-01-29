@@ -49,6 +49,7 @@ Snaily.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Open.Name = "Open"
 Open.Parent = Snaily
 Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
 Open.Position = UDim2.new(0.200000003, 0, -0, 0)
 Open.Size = UDim2.new(0, 59, 0, 22)
 
