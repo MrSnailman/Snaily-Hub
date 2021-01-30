@@ -10,5 +10,9 @@
     "1167791961": {
         "ScriptName": "KnifeSimulator.lua",
         "GameName": "Knife Simulator"
+    },
+    "1204176775": {
+        "ScriptName": "GunSimulator.lua",
+        "GameName": "Gun Simulator"
     }
 }
