@@ -6,5 +6,9 @@
     "301549746": {
         "ScriptName": "CounterBlox.lua",
         "GameName": "Counter Blox"
+    },
+    "1167791961": {
+        "ScriptName": "KnifeSimulator.lua",
+        "GameName": "Knife Simulator"
     }
 }
