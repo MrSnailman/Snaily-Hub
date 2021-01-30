@@ -1,7 +1,6 @@
 -- Made By MrSnailman
 
 -- Instances:
-
 local KnifeSim = Instance.new("ScreenGui")
 local Open = Instance.new("Frame")
 local OpenButton = Instance.new("TextButton")
@@ -13,7 +12,8 @@ local Credits = Instance.new("TextLabel")
 local SilentAim = Instance.new("TextLabel")
 local Exit = Instance.new("TextButton")
 local b1 = Instance.new("TextButton")
-local Snailmoment = Instance.new("TextLabel")
+local SilentAim_2 = Instance.new("TextLabel")
+local Long = Instance.new("TextBox")
 
 --Properties:
 
@@ -25,13 +25,13 @@ Open.Name = "Open"
 Open.Parent = KnifeSim
 Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.BackgroundTransparency = 1.000
-Open.Position = UDim2.new(-0.000696047267, 0, 0.478087664, 0)
+Open.Position = UDim2.new(-0.000696047267, 0, 0.71, 0)
 Open.Size = UDim2.new(0, 22, 0, 37)
 
 OpenButton.Name = "OpenButton"
 OpenButton.Parent = Open
 OpenButton.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-OpenButton.Position = UDim2.new(0.00546756759, 0, -0.358581036, 0)
+OpenButton.Position = UDim2.new(0.00546756759, 0, -0.71, 0)
 OpenButton.Size = UDim2.new(0, 25, 0, 48)
 OpenButton.Font = Enum.Font.SourceSans
 OpenButton.Text = ">"
@@ -61,8 +61,8 @@ Main.Name = "Main"
 Main.Parent = KnifeSim
 Main.AnchorPoint = Vector2.new(0.5, 0.5)
 Main.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-Main.Position = UDim2.new(0.37455982, 0, 0.585390925, 0)
-Main.Size = UDim2.new(0, 421, 0, 135)
+Main.Position = UDim2.new(0.308574706, 0, 0.603319228, 0)
+Main.Size = UDim2.new(0, 285, 0, 135)
 Main.ImageColor3 = Color3.fromRGB(22, 22, 22)
 Main.ScaleType = Enum.ScaleType.Slice
 Main.SliceCenter = Rect.new(100, 100, 100, 100)
@@ -89,8 +89,8 @@ DropShadow.SliceCenter = Rect.new(10, 10, 118, 118)
 SnailyText.Name = "SnailyText"
 SnailyText.Parent = Main
 SnailyText.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-SnailyText.Position = UDim2.new(-0.000694438, 0, -0.00449737767, 0)
-SnailyText.Size = UDim2.new(0, 421, 0, 30)
+SnailyText.Position = UDim2.new(-0.00069440878, 0, -0.00449738698, 0)
+SnailyText.Size = UDim2.new(0, 285, 0, 30)
 SnailyText.Font = Enum.Font.SourceSans
 SnailyText.Text = "Snaily Hub"
 SnailyText.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -101,7 +101,7 @@ SnailyText.TextWrapped = true
 Credits.Name = "Credits"
 Credits.Parent = Main
 Credits.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-Credits.Position = UDim2.new(0.654050827, 0, 0.866628766, 0)
+Credits.Position = UDim2.new(0.489138544, 0, 0.866628766, 0)
 Credits.Size = UDim2.new(0, 145, 0, 18)
 Credits.Font = Enum.Font.SourceSans
 Credits.Text = "Made By MrSnailman"
@@ -113,7 +113,7 @@ Credits.TextWrapped = true
 SilentAim.Name = "Silent Aim"
 SilentAim.Parent = Main
 SilentAim.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-SilentAim.Position = UDim2.new(0.0609077811, 0, 0.301998407, 0)
+SilentAim.Position = UDim2.new(0.0749429315, 0, 0.361257613, 0)
 SilentAim.Size = UDim2.new(0, 121, 0, 26)
 SilentAim.Font = Enum.Font.SourceSans
 SilentAim.Text = "Silent Aim"
@@ -126,7 +126,7 @@ Exit.Name = "Exit"
 Exit.Parent = Main
 Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Exit.BackgroundTransparency = 1.000
-Exit.Position = UDim2.new(0.929585338, 0, 0, 0)
+Exit.Position = UDim2.new(0.89800638, 0, 0, 0)
 Exit.Size = UDim2.new(0, 29, 0, 29)
 Exit.Font = Enum.Font.Gotham
 Exit.Text = "X"
@@ -142,61 +142,58 @@ end)
 b1.Name = "b1"
 b1.Parent = Main
 b1.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-b1.Position = UDim2.new(0.0615944788, 0, 0.495979071, 0)
-b1.Size = UDim2.new(0, 121, 0, 23)
+b1.Position = UDim2.new(0.0756295174, 0, 0.555238366, 0)
+b1.Size = UDim2.new(0, 120, 0, 23)
 b1.Font = Enum.Font.Gotham
-b1.Text = "Off"
+b1.Text = "Automatically on"
 b1.TextColor3 = Color3.fromRGB(255, 0, 0)
 b1.TextScaled = true
 b1.TextSize = 14.000
 b1.TextWrapped = true
 
-Snailmoment.Name = "Snailmoment"
-Snailmoment.Parent = Main
-Snailmoment.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Snailmoment.Position = UDim2.new(0.453681707, 0, 0.301998347, 0)
-Snailmoment.Size = UDim2.new(0, 200, 0, 48)
-Snailmoment.Font = Enum.Font.SourceSans
-Snailmoment.Text = "More Coming soon..."
-Snailmoment.TextColor3 = Color3.fromRGB(255, 255, 255)
-Snailmoment.TextScaled = true
-Snailmoment.TextSize = 14.000
-Snailmoment.TextWrapped = true
+SilentAim_2.Name = "Silent Aim"
+SilentAim_2.Parent = Main
+SilentAim_2.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+SilentAim_2.Position = UDim2.new(0.500190914, 0, 0.361257613, 0)
+SilentAim_2.Size = UDim2.new(0, 120, 0, 25)
+SilentAim_2.Font = Enum.Font.SourceSans
+SilentAim_2.Text = "Distance"
+SilentAim_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SilentAim_2.TextScaled = true
+SilentAim_2.TextSize = 14.000
+SilentAim_2.TextWrapped = true
+
+Long.Name = "Long"
+Long.Parent = Main
+Long.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Long.Position = UDim2.new(0.497670591, 0, 0.555238366, 0)
+Long.Size = UDim2.new(0, 121, 0, 23)
+Long.ZIndex = 0
+Long.Font = Enum.Font.SourceSans
+Long.Text = "5000"
+Long.TextColor3 = Color3.fromRGB(255, 0, 0)
+Long.TextScaled = true
+Long.TextSize = 14.000
+Long.TextWrapped = true
 
 
-local function YEBYMQ_fake_script() -- toggle.LocalScript 
-	local script = Instance.new('LocalScript', b1)
+plr, dist = nil,(Long.Text)
 
-	_G.silentaim = false
-	script.Parent.MouseButton1Click:Connect(function()
-		if _G.silentaim == false then
-			_G.silentaim = true
-			script.Parent.Text = "On"
-			script.Parent.TextColor3 = Color3.fromRGB(136, 255, 0)
-		else
-			_G.silentaim = false
-			script.Parent.Text = "Off"
-			script.Parent.TextColor3 = Color3.fromRGB(255, 0, 4)
+warn("Activated Aimbot")
+local plrs = game:service("Players")
+local ms = plrs.LocalPlayer:GetMouse()
+local nearest = function()
+	plr,dist = nil,5000
+	for k,l in pairs(plrs:GetPlayers()) do
+		local pos = l.Character:GetPrimaryPartCFrame().p
+		local len = (ms.Hit.p - pos).Magnitude
+		if len <= dist then
+			plr = l
+			dist = len
 		end
-	end)
-
-	warn("Activated Aimbot")
-	local plrs = game:service("Players")
-	local ms = plrs.LocalPlayer:GetMouse()
-	local nearest = function()
-		plr,dist = nil,5000
-		for k,l in pairs(plrs:GetPlayers()) do
-			local pos = l.Character:GetPrimaryPartCFrame().p
-			local len = (ms.Hit.p - pos).Magnitude
-			if len <= dist then
-				plr = l
-				dist = len
-			end
-		end
-		return plr.Character:GetPrimaryPartCFrame().p
 	end
-	workspace.CurrentCamera.trash.ChildAdded:connect(function(c)
-		c.CFrame = CFrame.new(nearest())
-	end)
+	return plr.Character:GetPrimaryPartCFrame().p
 end
-coroutine.wrap(YEBYMQ_fake_script)()
+workspace.CurrentCamera.trash.ChildAdded:connect(function(c)
+	c.CFrame = CFrame.new(nearest())
+end)
