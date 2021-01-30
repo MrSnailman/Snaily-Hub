@@ -281,7 +281,7 @@ Bean2.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
 Bean2.Position = UDim2.new(0.0649350658, 0, 0.626811624, 0)
 Bean2.Size = UDim2.new(0, 200, 0, 50)
 Bean2.Font = Enum.Font.SourceSans
-Bean2.Text = "Results of the script may be different in some executers"
+Bean2.Text = "Silent Aim Won't work on Snails V, Buy Synapse X if you want a perfect exploit"
 Bean2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Bean2.TextScaled = true
 Bean2.TextSize = 14.000
@@ -427,7 +427,6 @@ b4.TextColor3 = Color3.fromRGB(255, 0, 0)
 b4.TextScaled = true
 b4.TextSize = 14.000
 b4.TextWrapped = true
-b4.MouseButton1Down:connect(function()
 game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
 	for i,v in pairs (game:GetService("Players"):GetPlayers()) do
 		if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
