@@ -2,5 +2,9 @@
     "286090429": {
         "ScriptName": "Arsenal.lua",
         "GameName": "Arsenal"
+    },
+    "1165047394": {
+        "ScriptName": "CounterBlox.lua",
+        "GameName": "Counter Blox."
     }
 }
