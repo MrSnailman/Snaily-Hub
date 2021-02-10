@@ -422,7 +422,7 @@ b4.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 b4.Position = UDim2.new(0.0663450807, 0, 0.667424917, 0)
 b4.Size = UDim2.new(0, 121, 0, 23)
 b4.Font = Enum.Font.Gotham
-b4.Text = "click"
+b4.Text = "Automatically On"
 b4.TextColor3 = Color3.fromRGB(255, 0, 0)
 b4.TextScaled = true
 b4.TextSize = 14.000
@@ -448,8 +448,10 @@ b2.TextColor3 = Color3.fromRGB(255, 0, 0)
 b2.TextScaled = true
 b2.TextSize = 14.000
 b2.TextWrapped = true
+
+
 local function YEBYMQ_fake_script() -- toggle.LocalScript 
-	local script = Instance.new('LocalScript', toggle)
+	local script = Instance.new('LocalScript', b2)
 
 
 
