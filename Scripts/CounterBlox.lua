@@ -406,9 +406,14 @@ local function YIHREB_fake_script() -- TextButton.LocalScript
 			_G.triggerbot = true
 			script.Parent.TextColor3 = Color3.fromRGB(85,255,0)
 			script.Parent.Text = "On"
+			local player = game:GetService("Players").LocalPlayer
+			local mouse = player:GetMouse()
 			game:GetService("RunService").RenderStepped:Connect(function()
-				if mouse.Target.Parent:FindFirstChild("Humanoid") and _G.triggerbot and mouse.Target.Parent.Name ~= player.Name then
-					mouse1press() wait() mouse1release()
+				if mouse.Target.Parent:FindFirstChild("Humanoid") and mouse.Target.Parent.Name ~= player.Name then
+					local target = game:GetService("Players"):FindFirstChild(mouse.Target.Parent.Name)
+					if target.TeamColor ~= player.TeamColor then
+						mouse1press() wait() mouse1release()
+					end
 				end
 			end)
 		end
@@ -422,17 +427,36 @@ b4.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 b4.Position = UDim2.new(0.0663450807, 0, 0.667424917, 0)
 b4.Size = UDim2.new(0, 121, 0, 23)
 b4.Font = Enum.Font.Gotham
-b4.Text = "Automatically On"
+b4.Text = "Off"
 b4.TextColor3 = Color3.fromRGB(255, 0, 0)
 b4.TextScaled = true
 b4.TextSize = 14.000
 b4.TextWrapped = true
-game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
-	for i,v in pairs (game:GetService("Players"):GetPlayers()) do
-		if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
-			esp.Text = "{"..v.Name.."}"
-			gui:Clone().Parent = v.Character.Head
-		end
+local script = Instance.new('LocalScript', b4)
+
+_G.esp = false
+local player = game:GetService("Players").LocalPlayer
+local mouse = player:GetMouse()
+script.Parent.MouseButton1Click:Connect(function()
+	if _G.esp then
+		_G.esp = false
+		script.Parent.TextColor3 = Color3.fromRGB(255,0,0)
+		script.Parent.Text = "Does not turn off"
+
+	else
+		_G.esp = true
+		script.Parent.TextColor3 = Color3.fromRGB(85,255,0)
+		script.Parent.Text = "On"
+		local player = game:GetService("Players").LocalPlayer
+		local mouse = player:GetMouse()
+		game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
+			for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+				if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil and v.TeamColor ~= game:GetService("Players").LocalPlayer.TeamColor then -- craeting checks for team check, local player etc
+					esp.Text = "{"..v.Name.."}"
+					gui:Clone().Parent = v.Character.Head
+				end
+			end
+		end)
 	end
 end)
 
